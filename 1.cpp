@@ -10,23 +10,22 @@ int main(int argc, char* argv[])
 	setlocale(LC_ALL, "Russian");
 	int n;
 	int q = atoi(argv[1]);
-	int key; //Величина сдвига для Цезаря
+	int key; 
 	string result = "";
 	n = atoi(argv[2]);
 	cout << n;
 	ifstream in(argv[3]);
 	switch (q)
 	{
-	case 1: //шифр Цезаря
+	case 1: 
 	{
 		key = atoi(argv[4]);
 		switch (n) 
 		{
 		case 1:
 		{
-			
 			if (key > 26)
-				key = key % 26;
+			key = key % 26;
 			string s; 
 			getline(in, s);
 			cout << "Source string: \n" << s << endl;
@@ -103,8 +102,6 @@ int main(int argc, char* argv[])
 
 		break;
 	}
-
-
 
 	case 2:
 	{
